@@ -2,12 +2,16 @@ package fr.fms.hmi;
 
 import javax.swing.*;
 
+import fr.fms.dao.ProductDao;
+import fr.fms.entities.Product;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * @author Camille - 2023
@@ -70,15 +74,30 @@ public class View extends JFrame {
 				//						}
 				//					
 				//				
+				
 				System.out.println("Test");
 			}
 		});
-
-		String data[][]={ {"101","Amit","670000", "ddd", "ddd"},    
-				{"102","Jai","780000", "ddd", "ddd"},    
-				{"101","Sachin","700000", "ddd", "ddd"}}; 
-		String data[][]=new ;
-		String column[]={"ID","NAME","BRAND","PRICE", "CATEGORY ID"};  
+		Controller ctrl = new Controller();
+		
+		ArrayList<Product> products = ctrl.getMonArrayList();
+		System.out.println(products);
+		
+		ProductTableModel ptm = new ProductTableModel(products.toArray(new Product[0]));
+		
+		String data[][] = new String[ptm.getRowCount()][ptm.getColumnCount()];
+		String column[] = new String[ptm.getColumnCount()];
+		
+		for (int i = 0; i < products.size(); i++) {
+			for (int j = 0; j < 5; j++) {
+				
+				data[i][j] = ptm.getValueAt(i, j).toString();
+			}
+		}
+		for (int j = 0; j < 5; j++) {			
+			column[j] = ptm.getColumnName(j);
+		}
+		  
 		
 		
 		JTable table = new JTable(data,column);    

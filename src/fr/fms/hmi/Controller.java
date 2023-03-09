@@ -1,12 +1,27 @@
 package fr.fms.hmi;
 
+import java.util.ArrayList;
+
 import fr.fms.dao.ProductDao;
+import fr.fms.entities.Product;
 
 public class Controller {
 	
-//ProductDao productDao = new ProductDao();
-//	
-//	
+ProductDao productDao = new ProductDao();
+ArrayList<Product> products;
+
+
+public Controller() {
+	this.products = getMonArrayList();
+}
+
+
+
+public ArrayList<Product> getMonArrayList() {
+	return productDao.readAll();
+}
+	
+	
 //	this.products = productDao.readAll(); 
 //	
 //	Object[][] donnees = new Object[products.size()][5];

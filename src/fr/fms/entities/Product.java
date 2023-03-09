@@ -5,15 +5,19 @@ public class Product {
 	private String description;
 	private String brand;
 	private double price;
-	private int category;
+	private String category;
 	
-public Product(int id, String description, String brand, double price, int category) {
+public Product(int id, String description, String brand, double price, String category) {
 
 	this.id = id;
 	this.description = description;
 	this.brand = brand;
 	this.price = price;
 	this.category = category;
+}
+
+public Product() {
+	// TODO Auto-generated constructor stub
 }
 
 public int getId() {
@@ -48,11 +52,11 @@ public void setPrice(double price) {
 	this.price = price;
 }
 
-public int getCategory() {
+public String getCategory() {
 	return category;
 }
 
-public void setCategory(int category) {
+public void setCategory(String category) {
 	this.category = category;
 }
 

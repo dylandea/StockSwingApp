@@ -14,17 +14,16 @@ CREATE TABLE T_Product (
 	Description				varchar(30)	NOT NULL,
 	Brand					varchar(30)	NOT NULL,
 	Price			float(8)	NOT NULL ,
-	Category			varchar(30) NOT NULL,
-	Quantity				int(4) NOT NULL
+	Category			varchar(30) NOT NULL
 ) ENGINE = InnoDB;
 
-INSERT INTO T_Product ( Description, Brand, Price , Category, Quantity ) VALUES ( 'S9'     ,	'Samsung', 250			, 'SmartPhone', 10 );
-INSERT INTO T_Product ( Description, Brand, Price , Category, Quantity ) VALUES ( 'S10'    ,	'Samsung', 350 		, 'SmartPhone', 5 );
-INSERT INTO T_Product ( Description, Brand, Price , Category, Quantity) VALUES ( 'Iphone 10',	'Apple',	500 ,  'SmartPhone', 2 );
-INSERT INTO T_Product ( Description, Brand, Price , Category, Quantity ) VALUES ( 'F756U', 'Asus', 600 		,  'Laptop', 15 );
-INSERT INTO T_Product ( Description, Brand, Price , Category , Quantity ) VALUES ( 'GalacyTab S7', 'Samsung', 250 			, 'Tablet', 20 );
-INSERT INTO T_Product ( Description, Brand, Price , Category , Quantity ) VALUES ( 'Ipad Pro'      , 	'Apple',	750      , 'Tablet', 20 );
-INSERT INTO T_Product ( Description, Brand, Price , Category, Quantity  ) VALUES ( 'Canon Pixma'    , 'Canon', 65 			, 'Printer', 50 );
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'S9'     ,	'Samsung', 250			, 'SmartPhone');
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'S10'    ,	'Samsung', 350 		, 'SmartPhone');
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'Iphone 10',	'Apple',	500 ,  'SmartPhone');
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'F756U', 'Asus', 600 		,  'Laptop');
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'GalacyTab S7', 'Samsung', 250 			, 'Tablet');
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'Ipad Pro'      , 	'Apple',	750      , 'Tablet');
+INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'Canon Pixma'    , 'Canon', 65 			, 'Printer');
 
 
 SELECT * FROM T_Product;

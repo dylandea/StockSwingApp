@@ -50,8 +50,9 @@ public class ProductDao implements Dao<Product> {
 					String rsDescription = resultSet.getString(2);
 					String rsBrand = resultSet.getString(3);
 					double rsPrice = resultSet.getDouble(4);
-					int rsCategoryId = resultSet.getInt(5);
-					products.add((new Product(rsId,rsDescription,rsBrand,rsPrice, rsCategoryId)));						
+					String rsCategoryId = resultSet.getString(5);
+					products.add((new Product(rsId,rsDescription,rsBrand,rsPrice, rsCategoryId)));	
+					System.out.println(rsCategoryId);
 				}	
 			}
 		} catch (SQLException e) {
