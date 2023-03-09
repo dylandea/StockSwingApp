@@ -1,13 +1,19 @@
-package fr.fms.mvc;
+package fr.fms.hmi;
 
-import javax.swing.*;
-
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 /**
  * @author Camille - 2023
@@ -55,7 +61,7 @@ public class View extends JFrame {
 			@SuppressWarnings("deprecation")
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
-				//				if (!tname.getText().isEmpty() || !tpassword.getText().isEmpty()) {
+
 				//					conn = SingletonConnection.getConnection();
 				//					try {
 				//						ps = conn.prepareStatement("SELECT IdUser FROM T_Users WHERE login = ? AND password = ?");
@@ -68,33 +74,60 @@ public class View extends JFrame {
 				//						} else {
 				//							JOptionPane.showMessageDialog(null, "Connection refused...");
 				//						}
-				//					} catch (SQLException e) {
-				//						e.printStackTrace();
-				//					}
-				//				} else {
-				//					JOptionPane.showMessageDialog(null, "Input error...");
-				//				}
+				//					
+				//				
 				System.out.println("Test");
 			}
 		});
 
-		String data[][]={ {"101","Amit","670000"},    
-				{"102","Jai","780000"},    
-				{"101","Sachin","700000"}};    
-		String column[]={"ID","NAME","SALARY"};         
+		String data[][]={ {"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"},
+				{"101","Amit","670000", "ddd", "ddd"},    
+				{"102","Jai","780000", "ddd", "ddd"},    
+				{"101","Sachin","700000", "ddd", "ddd"}}; 
+		String column[]={"ID","NAME","BRAND","PRICE", "CATEGORY ID"};  
+
+
 		JTable table = new JTable(data,column);    
-		table.setBounds(30,150,600,400);
+		table.setBounds(30,150,924,382);
 		table.setFont(fb);
 		table.setBackground(Color.white);
 		table.setForeground(Color.black);
 		JScrollPane scroll = new JScrollPane(table);
-		panel.add(table);
+		scroll.setBounds(30,150,924,382);
+		scroll.setFont(fb);
+		scroll.setBackground(Color.white);
+		scroll.setForeground(Color.black);
+		panel.add(scroll);
 
 		this.setVisible(true);
 		this.setSize(1000, 600);
 		this.setLocationRelativeTo(null);
 		this.setContentPane(panel);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.setResizable(false);
 		panel.setBackground(Color.black);
 	}
 }
