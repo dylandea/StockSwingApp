@@ -1,3 +1,12 @@
 *.class
 config.properties
 *.properties
+files/config.properties
+bin/fr/fms/dao/ProductDao.class
+bin/fr/fms/dao/Dao.class
+bin/fr/fms/dao/BddConnection.class
+bin/fr/fms/entities/Product.class
+bin/fr/fms/hmi/Controller.class
+bin/fr/fms/hmi/ProductTableModel.class
+bin/fr/fms/hmi/View.class
+bin/fr/fms/App.class

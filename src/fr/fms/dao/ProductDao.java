@@ -42,7 +42,7 @@ public class ProductDao implements Dao<Product> {
 	@Override
 	public ArrayList<Product> readAll() {
 		ArrayList<Product> products = new ArrayList<Product>();
-		String strSql = "SELECT * FROM T_Products";		
+		String strSql = "SELECT * FROM T_Product";		
 		try(Statement statement = connection.createStatement()){
 			try(ResultSet resultSet = statement.executeQuery(strSql)){ 			
 				while(resultSet.next()) {

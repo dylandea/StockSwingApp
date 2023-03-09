@@ -5,13 +5,21 @@ import javax.swing.*;
 import fr.fms.dao.ProductDao;
 import fr.fms.entities.Product;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 /**
  * @author Camille - 2023
@@ -97,22 +105,26 @@ public class View extends JFrame {
 		for (int j = 0; j < 5; j++) {			
 			column[j] = ptm.getColumnName(j);
 		}
-		  
 		
 		
 		JTable table = new JTable(data,column);    
-		table.setBounds(30,150,600,400);
+		table.setBounds(30,150,924,382);
 		table.setFont(fb);
 		table.setBackground(Color.white);
 		table.setForeground(Color.black);
 		JScrollPane scroll = new JScrollPane(table);
-		panel.add(table);
+		scroll.setBounds(30,150,924,382);
+		scroll.setFont(fb);
+		scroll.setBackground(Color.white);
+		scroll.setForeground(Color.black);
+		panel.add(scroll);
 
 		this.setVisible(true);
 		this.setSize(1000, 600);
 		this.setLocationRelativeTo(null);
 		this.setContentPane(panel);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.setResizable(false);
 		panel.setBackground(Color.black);
 	}
 }
