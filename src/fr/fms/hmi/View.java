@@ -68,22 +68,7 @@ public class View extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 
-				//					conn = SingletonConnection.getConnection();
-				//					try {
-				//						ps = conn.prepareStatement("SELECT IdUser FROM T_Users WHERE login = ? AND password = ?");
-				//						User obj = null;
-				//						ps.setString(1, ((User) obj).getLogin());
-				//						ps.setString(2, ((User) obj).getPassword());
-				//						rs = ps.executeQuery();
-				//						if (rs.next()) {
-				//							JOptionPane.showMessageDialog(null, "Connection successfully...");
-				//						} else {
-				//							JOptionPane.showMessageDialog(null, "Connection refused...");
-				//						}
-				//					
-				//				
-				
-				System.out.println("Test");
+			new View();
 			}
 		});
 		Controller ctrl = new Controller();
