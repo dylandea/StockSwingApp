@@ -25,7 +25,7 @@ public class ProductTableModel extends AbstractTableModel {
 
 	public ProductTableModel(Product ...individus) {
 		products.addAll(Arrays.asList(individus));
-		System.out.println(products);
+		//System.out.println(products);
 	}
 
 	@Override

@@ -41,7 +41,7 @@ public class ColorsView extends JTable {
 			{
 				if ( actualRow % 2 == 0 )
 				{
-					newGraphics.setColor( Color.ORANGE );
+					newGraphics.setColor( Color.lightGray );
 					newGraphics.fillRect( 0, rowYToDraw, getWidth(), getRowHeight() );
 					newGraphics.setColor( UIManager.getColor( "Table.gridColor" ) );
 				}
@@ -65,7 +65,7 @@ public class ColorsView extends JTable {
 		Component c = super.prepareRenderer( renderer, row, column );
 		if ( !isRowSelected( row ) )
 		{
-			c.setBackground( row % 2 == 0 ? getBackground() : Color.ORANGE );
+			c.setBackground( row % 2 == 0 ? getBackground() : Color.lightGray );
 		}
 		return c;
 	}

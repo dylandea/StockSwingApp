@@ -92,7 +92,8 @@ public class View extends JFrame {
 		}
 		
 		
-		JTable table = new JTable(data,column);    
+		//JTable table = new JTable(data,column); 
+		ColorsView table = new ColorsView(data,column);
 		table.setBounds(30,150,924,382);
 		table.setFont(fb);
 		table.setBackground(Color.white);
