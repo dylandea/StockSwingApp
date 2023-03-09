@@ -38,7 +38,7 @@ public class ProductDao implements Dao<Product> {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
 	@Override
 	public ArrayList<Product> readAll() {
 		ArrayList<Product> products = new ArrayList<Product>();
@@ -52,7 +52,7 @@ public class ProductDao implements Dao<Product> {
 					double rsPrice = resultSet.getDouble(4);
 					String rsCategoryId = resultSet.getString(5);
 					products.add((new Product(rsId,rsDescription,rsBrand,rsPrice, rsCategoryId)));	
-					//System.out.println(rsCategoryId);
+					System.out.println(rsCategoryId);
 				}	
 			}
 		} catch (SQLException e) {

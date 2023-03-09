@@ -17,7 +17,7 @@ CREATE TABLE T_Product (
 	Category			varchar(30) NOT NULL
 ) ENGINE = InnoDB;
 
-INSERT INTO T_Product ( Description, Brand, Price , Category ) VALUES ( 'S9'     ,	'Samsung', 250			, 'SmartPhone' );
+INSERT INTO T_Product ( Description, Brand, Price , Category ) VALUES ( 'S87544'     ,	'Samsung', 250			, 'SmartPhone' );
 INSERT INTO T_Product ( Description, Brand, Price , Category ) VALUES ( 'S10'    ,	'Samsung', 350 		, 'SmartPhone' );
 INSERT INTO T_Product ( Description, Brand, Price , Category) VALUES ( 'Iphone 10',	'Apple',	500 ,  'SmartPhone' );
 INSERT INTO T_Product ( Description, Brand, Price , Category ) VALUES ( 'F756U', 'Asus', 600 		,  'Laptop' );
