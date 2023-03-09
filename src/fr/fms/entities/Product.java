@@ -7,7 +7,7 @@ public class Product {
 	private double price;
 	private int category;
 	
-public Product(int id, String description, String brand, double price, int category, int quantity) {
+public Product(int id, String description, String brand, double price, int category) {
 
 	this.id = id;
 	this.description = description;
